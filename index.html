@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoGuard</title>   
+    <link rel="stylesheet" href="home-style.css">
+    <link rel="icon" href="img-Proyect/logo-pestaña-32px.png">
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>
+                <img src="img-Proyect/logo-128px.png">
+            </h1>
+        </div>
+        <div class="titulo">
+            <h2>
+                CryptoGuard
+            </h2>
+        </div>
+        
+    </header>
+
+
+    <main>
+        <form>
+            <label for="encrypted-Text">Ingrese el texto aqui</label>
+            <input type="text" id="encrypted-Text" class="input-padron">
+            <div id="mensajeError" style="color: red;"></div>
+            
+            <div class="btn-encriptador">
+                <button type="button" id="encriptar-btn" onclick="encriptarTexto();" class="container-boton">Encriptar</button>
+                <button type="button" id="desencriptador-btn" onclick="desencriptadorTexto();" class="container-boton">Desencriptar</button>
+            </div>
+        
+            <div class="messege-encrypted">
+                <label for="mensaje">Mensaje</label>
+                <h1>
+                    <img src="img-Proyect/img-campoEncrip-128px.png" alt="">
+                </h1>
+                <textarea cols="70" rows="10" id="mensaje" class="campo-mensaje">No se ha encontrado un texto aun</textarea>
+            </div>
+            <div class="btn-encriptador">
+                <button type="button" id="btn-copiar" onclick="copiarTexto();" class="container-boton">Copiar</button>
+            </div>
+
+        </form>
+    </main>
+
+    <footer>
+        <p class="copyright">&copy Copyright CryptoGuard - 2024</p>
+    </footer>
+
+    <script src="home-js.JS"></script>
+</body>
+</html>

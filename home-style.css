@@ -1,0 +1,109 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Anton&display=swap');
+
+
+body{
+    margin: 0;
+    background:white;
+}
+
+header{
+    background: #1dbfbf;
+    padding: 20px 0px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+}
+
+h1, h2 ,p, label, button, input, textarea, div {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.logo{
+    text-align: center;
+}
+
+.titulo{
+    font-size: 30px;
+    text-align: center;
+}
+
+
+form label {
+    display: block;
+    font-size: 20px;
+    margin: 20px 0 20px 30px
+}
+
+.input-padron{
+    display: block;
+    width: 1850px;
+    height: 200px;
+    margin: 30px 0 0 30px;
+    background: #1dbfbf;  
+    border: 2px solid #000000;
+    border-radius: 10px;
+    outline: none;
+}
+
+.container-boton{
+    text-align: center;
+    background: #1dbfbf;  
+    border: 2px solid #000000;
+    border-radius: 10px;
+    font-size: 20px;
+    width: 150px;
+    height: 40px;
+    text-decoration: none;
+    margin: 40px 0 0 50px;
+}
+
+.btn-encriptador{
+    text-align: center; 
+}
+
+.container-boton:hover{
+    background: #125869;
+    transform: scale(1.2);
+}
+
+.messege-encrypted h1{
+    float: left;
+    margin: 50px 0px 0 60px;
+}
+
+.campo-mensaje{
+    display: block;
+    width: 1630px;
+    height: 200px;
+    margin: 30px 0 0 250px;
+    background: #1dbfbf;  
+    border: 2px solid #000000;
+    border-radius: 10px;
+    outline: none;
+}
+
+footer{
+    text-align: center;
+    background: #1dbfbf;
+    padding: 40px;
+    margin: 20px 0 0 0 ;
+    border-top: 2px solid black;
+}
+
+.copyright{
+    color: black;
+}
+
+@media screen and (max-width:480px){
+    h1{
+        text-align: center;
+    }
+
+    .input-padron, .campo-mensaje{
+        width: 350px;
+        margin: 0 auto;
+    }
+}
