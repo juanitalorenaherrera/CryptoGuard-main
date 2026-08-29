@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CryptoGuard: herramienta educativa para encriptar y desencriptar textos en el navegador.">
+    <title>CryptoGuard | Encriptador educativo</title>
+    <link rel="icon" href="img-Proyect/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="home-style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container hero">
+            <div class="hero-copy">
+                <p class="eyebrow">Herramienta educativa</p>
+                <h1>CryptoGuard</h1>
+                <p class="hero-text">Transforma tus mensajes de forma sencilla y practica directamente desde tu navegador.</p>
+            </div>
+            <img class="hero-logo" src="img-Proyect/logo-128px.png" alt="Logo de CryptoGuard" width="128" height="128">
+        </div>
+    </header>
+
+    <main class="container page-content">
+        <section class="intro" aria-labelledby="intro-title">
+            <div>
+                <p class="section-kicker">Cifrado de texto</p>
+                <h2 id="intro-title">Escribe, transforma y copia</h2>
+                <p class="intro-text">Introduce un texto en minusculas y sin numeros. CryptoGuard reemplaza las vocales para mostrarte como funciona una transformacion de texto.</p>
+            </div>
+            <div class="rule-note" role="note">
+                <strong>Reglas actuales</strong>
+                <span>Solo se permiten letras minusculas, espacios y signos.</span>
+            </div>
+        </section>
+
+        <form id="crypto-form" class="workspace" novalidate>
+            <section class="card input-card" aria-labelledby="input-title">
+                <div class="card-heading">
+                    <div>
+                        <span class="step-number">01</span>
+                        <h2 id="input-title">Texto de entrada</h2>
+                    </div>
+                    <span id="character-count" class="character-count">0 caracteres</span>
+                </div>
+
+                <label for="encrypted-Text">Mensaje que quieres transformar</label>
+                <textarea id="encrypted-Text" class="text-field" rows="7" maxlength="500" placeholder="Ejemplo: este es mi mensaje" autocomplete="off" spellcheck="false" aria-describedby="input-help mensajeError"></textarea>
+                <div class="field-footer">
+                    <p id="input-help" class="field-help">Usa letras minusculas. Los espacios y signos se conservan.</p>
+                    <p id="mensajeError" class="error-message" role="alert" aria-live="polite"></p>
+                </div>
+
+                <div class="actions" aria-label="Acciones de transformación">
+                    <button type="button" id="encriptar-btn" class="button button-primary">Encriptar</button>
+                    <button type="button" id="desencriptador-btn" class="button button-secondary">Desencriptar</button>
+                </div>
+            </section>
+
+            <section class="card output-card" aria-labelledby="output-title">
+                <div class="card-heading">
+                    <div>
+                        <span class="step-number">02</span>
+                        <h2 id="output-title">Resultado</h2>
+                    </div>
+                    <span class="result-status" id="result-status" aria-live="polite">Listo para comenzar</span>
+                </div>
+
+                <div class="result-visual">
+                    <img src="img-Proyect/img-campoEncrip-128px.png" alt="Ilustracion de una persona protegiendo un mensaje" width="128" height="128">
+                    <p>Tu resultado aparecera aqui</p>
+                </div>
+                <label class="sr-only" for="mensaje">Texto resultante</label>
+                <textarea id="mensaje" class="text-field result-field" rows="7" readonly aria-live="polite">Aun no hay un resultado.</textarea>
+                <button type="button" id="btn-copiar" class="button button-copy" disabled>Copiar resultado</button>
+            </section>
+        </form>
+
+        <section class="steps" aria-labelledby="steps-title">
+            <h2 id="steps-title">Como usarlo</h2>
+            <div class="steps-grid">
+                <article class="step-card">
+                    <span class="step-number">01</span>
+                    <h3>Escribe</h3>
+                    <p>Introduce un mensaje en el campo de entrada.</p>
+                </article>
+                <article class="step-card">
+                    <span class="step-number">02</span>
+                    <h3>Transforma</h3>
+                    <p>Elige encriptar o desencriptar segun lo que necesites.</p>
+                </article>
+                <article class="step-card">
+                    <span class="step-number">03</span>
+                    <h3>Comparte</h3>
+                    <p>Copia el resultado cuando este listo para usarlo.</p>
+                </article>
+            </div>
+        </section>
+
+        <p class="educational-note"><strong>Nota:</strong> este proyecto es una demostracion educativa de sustitucion de caracteres y no reemplaza un sistema de cifrado criptografico real.</p>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <img src="img-Proyect/log-footer-128px.png" alt="" width="64" height="64">
+            <p>&copy; <span id="current-year"></span> CryptoGuard. Proyecto educativo.</p>
+        </div>
+    </footer>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="home-js.js" defer></script>
+</body>
+</html>
